@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO COMPANY</title>
+</head>
+<body>
+    <h1>INFO COMPANY</h1>
+    <table border="2">
+        <tr>
+            <th>COMPANY CODE</th>
+            <th>COMPANY NAME</th>
+            <th>FOUNDED YEAR</th>
+            <th>COMPANY ADDRESS</th>
+        </tr>
+        {% for company in companys %} 
+        <tr>
+            <td>{{ company.company_code }}</td>
+            <td>{{ company.company_name }}</td>
+            <td>{{ company.founded_year }}</td>
+            <td>{{ company.company_address }}</td>
+        </tr>
+        {% endfor %} 
+    </table><br><br>
+    <form method="get" action="website_company">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>

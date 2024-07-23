@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE COMMODITY</title>
+</head>
+<body>
+    <h1>UPDATE COMMODITY</h1>
+    <form method="get" action="update_commodity_success">
+        <label for="commodity_codes">Commodity Code</label>
+        <select name="commodity_codes" id="commodity_codes">
+            {% for commodity in commoditys %} 
+            <option value="{{ commodity.commodity_codes }}">
+                {{ commodity.commodity_codes }}
+            </option>
+            {% endfor %} 
+        </select><br><br>
+        <label for="goods_name">Goods Name</label>
+        <input type="text" name="goods_name" id="goods_name"><br><br>
+        <label for="year_of_manufacture">Year Of Manufacture</label>
+        <input type="Date" name="year_of_manufacture" id="year_of_manufacture"><br><br>
+        <label for="product_price">Product Price</label>
+        <input type="number" name="product_price" id="product_price"><br><br>
+        <label for="note">Note</label>
+        <input type="text" name="note" id="note"><br><br>
+        <label for="company_codes">Company Codes</label>
+        <input type="text" name="company_codes" id="company_codes"><br><br>
+        <button type="submit">ADD COMMODITY</button><br><br>
+    </form>
+    <form method="get" action="website_commodity">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMODITY FOR YOU</title>
+</head>
+<body>
+    <h1>COMMODITY FOR YOU</h1>
+    <table border="2">
+        <tr>
+            <th>Commodity Code</th>
+            <th>Goode Name</th>
+            <th>Year Of Manufacture</th>
+            <th>Product Price</th>
+            <th>Note</th>
+            <th>Company Codes</th>
+        </tr>
+        <tr>
+            <td>{{ commodity.commodity_codes }}</td>
+            <td>{{ commodity.goods_name }}</td>
+            <td>{{ commodity.year_of_manufacture }}</td>
+            <td>{{ commodity.product_price }}</td>
+            <td>{{ commodity.note }}</td>
+            <td>{{ commodity.company_codes }}</td>
+        </tr>
+    </table><br><br>
+    <form method="get" action="website_commodity">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>

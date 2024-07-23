@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPANY FOR YOU</title>
+</head>
+<body>
+    <h1>COMPANY FOR YOU</h1>
+    <table border="2">
+        <tr>
+            <th>Company Code</th>
+            <th>Company Name</th>
+            <th>Founded Year</th>
+            <th>Company Address</th>
+        </tr>
+        <tr>
+            <td>{{ company.company_code }}</td>
+            <td>{{ company.company_name }}</td>
+            <td>{{ company.founded_year }}</td>
+            <td>{{ company.company_address }}</td>
+        </tr>
+    </table><br><br>
+    <form method="get" action="website_company">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>

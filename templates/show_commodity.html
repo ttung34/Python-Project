@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND COMMODITY</title>
+</head>
+<body>
+    <h1>FIND COMMODITY</h1>
+    <form method="get" action="show_commodity_success">
+        <label for="commodity_codes">Commodity Code</label>
+        <select name="commodity_codes" id="commodity_codes">
+            {% for commodity in commoditys %} 
+            <option value="{{ commodity.commodity_codes }}">
+                {{ commodity.commodity_codes }}
+            </option>
+            {% endfor %}
+        </select><br><br>
+        <button type="submit">FIND COMMODITY</button><br><br>
+    </form>
+    <form method="get" action="website_commodity">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>

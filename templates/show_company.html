@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND COMPANY</title>
+</head>
+<body>
+    <h1>FIND COMPANY</h1>
+    <form method="get" action="show_company_success">
+        <label for="company_code">Company Code</label>
+        <select name="company_code" id="company_code">
+            {% for company in companys %} 
+            <option value="{{ company.company_code }}">
+                {{ company.company_code }}
+            </option>
+            {% endfor %}
+        </select><br><br>
+        <button type="submit">FIND COMPANY</button><br><br>
+    </form>
+    <form method="get" action="website_company">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>

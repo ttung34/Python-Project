@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE COMPANY</title>
+</head>
+<body>
+    <h1>DELETE COMPANY</h1>
+    <form method="get" action="delete_company_success">
+        <table border="2">
+            <tr>
+                <th>Company Code</th>
+                <th>Select To Delete</th>
+            </tr>
+            {% for company in companys %} 
+            <tr>
+                <td>{{ company.company_code }}</td>
+                <td>
+                    <input type="checkbox" name="company_code" value="{{ company.company_code }}">
+                </td>
+            {% endfor %} 
+            </tr>
+        </table><br><br>
+        <button type="submit">DELETE COMPANY</button><br><br>
+    </form>
+    <form method="get" action="website_company">
+        <button type="submit">COME BACK</button><br><br>
+    </form>
+</body>
+</html>
